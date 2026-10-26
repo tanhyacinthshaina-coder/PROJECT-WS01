@@ -1,0 +1,232 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LoopLogic Crochet | Handmade Crochet</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <a class="logo" href="#" data-page="home">
+      LoopLogic Crochet
+      <span>handmade with love</span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle">☰</button>
+
+    <nav id="mainNav">
+      <a href="#" data-page="home">Products</a>
+      <a href="#" data-page="about">All About Us</a>
+      <a href="#" data-page="cart">
+        Add to Cart <span class="cart-count" id="cartCount">0</span>
+      </a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HOME PAGE -->
+    <section id="homePage" class="page">
+
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">HANDMADE WITH LOVE</p>
+          <h1>Little loops.<br><span>Lots of love.</span></h1>
+          <p>
+            Discover handmade crochet pieces made to bring
+            warmth and personality to your everyday life.
+          </p>
+          <button class="primary-button" id="shopNow">
+            Explore the collection
+          </button>
+        </div>
+
+        <div class="hero-art">
+          <img
+            src="photo 30.jpeg"
+            alt="Handmade crafts">
+          <div class="hero-note">Made by hand<br>just for you ♡</div>
+        </div>
+      </section>
+
+      <!-- PRODUCT CATEGORIES -->
+      <section class="section-wrap" id="collections">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">FIND YOUR FAVORITE</p>
+            <h2>Shop by category</h2>
+          </div>
+          <p>Small handmade details, big happy feelings.</p>
+        </div>
+
+        <div class="category-grid">
+          <button class="category-card" data-category="Bags">
+            <span>01</span>
+            <strong>Bags</strong>
+            <small>Everyday companions</small>
+          </button>
+
+          <button class="category-card" data-category="Keychain">
+            <span>02</span>
+            <strong>Keychain</strong>
+            <small>Tiny things to love</small>
+          </button>
+
+          <button class="category-card" data-category="Wearable">
+            <span>03</span>
+            <strong>Wearable</strong>
+            <small>Made to be worn</small>
+          </button>
+
+          <button class="category-card" data-category="Plushie">
+            <span>04</span>
+            <strong>Plushie</strong>
+            <small>Soft little friends</small>
+          </button>
+        </div>
+      </section>
+
+      <!-- PRODUCTS -->
+      <section class="section-wrap product-section" id="productSection">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow" id="productEyebrow">MADE WITH CARE</p>
+            <h2 id="productHeading">Our products</h2>
+          </div>
+          <button class="text-button" id="showAll">
+            Show all products ↗
+          </button>
+        </div>
+
+        <div class="product-grid" id="productGrid"></div>
+      </section>
+    </section>
+
+    <!-- ABOUT US PAGE -->
+    <section id="aboutPage" class="page hidden">
+      <section class="about-hero">
+        <p class="eyebrow">A LITTLE ABOUT OUR LITTLE SHOP</p>
+        <h1>Made slowly.<br><span>Loved endlessly.</span></h1>
+        <p>
+          LoopLogic Crochet is a handmade crochet shop inspired
+          by creativity, cozy colors, and the joy of making
+          something with care.
+        </p>
+      </section>
+
+      <section class="about-content">
+        <div class="about-photo">
+          <img
+            src="photo 30.jpeg"
+            alt="Handmade crochet materials">
+        </div>
+
+        <div>
+          <p class="eyebrow">OUR STORY</p>
+          <h2>Welcome to LoopLogic Crochet — where handcrafted warmth meets purposeful beginnings..</h2>
+          <p>
+           We created this space out of a simple, genuine love for making things by hand, and a dream to grow together. The idea first grew from one of our team members’ small crocheting business: every piece, every stitch, and every item you see here is her work — made with care, patience, and heart.
+          </p>
+          <p>
+            We built this website not just to share beautiful handmade creations, but because we believe in looking forward. We may not know exactly what the future holds, but we know this: this is our stepping stone. This is where we learn, grow, and build the foundation for the online business we hope to one day call fully our own. Every loop we tie and every page we build brings us closer to that dream.
+          </p>
+          <p>
+            Thank you for being part of our beginning — every visit, every connection, and every support helps us take the next step forward.
+Stitched with care. Built with hope
+          </p>
+          <button class="primary-button" data-page="home">
+            Explore products
+          </button>
+        </div>
+      </section>
+    </section>
+
+    <!-- SHOPPING CART PAGE -->
+    <section id="cartPage" class="page hidden">
+      <section class="section-wrap cart-wrap">
+        <p class="eyebrow">YOUR HANDMADE FINDS</p>
+        <h1 class="page-title">Shopping cart</h1>
+        <p class="muted">
+          Check your items, colors, and quantities before checkout.
+        </p>
+
+        <div id="cartContents"></div>
+      </section>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div>
+      <a class="logo footer-logo" href="#" data-page="home">
+       LoopLogic Crochet
+        <span>handmade with love</span>
+      </a>
+      <p>
+        Little loops, lots of love.
+        Thank you for supporting handmade.
+      </p>
+    </div>
+
+    <div class="footer-links">
+      <a href="#" data-page="home">Products</a>
+      <a href="#" data-page="about">All About Us</a>
+      <a href="#" data-page="cart">Add to Cart</a>
+    </div>
+
+    <p class="copyright">
+      © <span id="year"></span> LoopLogic Crochet. Made with care ♡
+    </p>
+  </footer>
+
+  <!-- PRODUCT DETAILS POPUP -->
+  <div class="modal-backdrop hidden" id="productModal">
+    <section class="product-modal" role="dialog" aria-modal="true">
+      <button class="close-modal" id="closeModal">×</button>
+
+      <div class="modal-gallery">
+        <img id="mainProductImage" src="" alt="Selected product">
+        <div class="thumbnail-row" id="thumbnailRow"></div>
+      </div>
+
+      <div class="modal-info">
+        <p class="eyebrow" id="modalCategory"></p>
+        <h2 id="modalTitle"></h2>
+        <p class="modal-price" id="modalPrice"></p>
+        <p id="modalDescription"></p>
+
+        <label class="field-label">Choose a color</label>
+        <div class="color-options" id="colorOptions"></div>
+
+        <label class="field-label">Quantity</label>
+        <div class="quantity-control">
+          <button id="modalMinus">−</button>
+          <span id="modalQuantity">1</span>
+          <button id="modalPlus">+</button>
+        </div>
+
+        <button class="primary-button full-button" id="addToCartButton">
+          Add to cart
+        </button>
+
+        <button class="secondary-button full-button" id="buyNowButton">
+          Buy now
+        </button>
+
+        <p class="small-note">
+          Sample products and colors can be changed to your actual items.
+        </p>
+      </div>
+    </section>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+</body>
+</html>
+
